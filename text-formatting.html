@@ -2,46 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Text Formatting Example</title>
+    <title>About Us - Mission & History</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .main-nav {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .main-nav a {
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .content-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid #004080;
+            background-color: #f5f9ff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Welcome to Our Campus</h1>
-</header>
 
-<main>
-    <section>
-        <h2>About Our Mission</h2>
-        <p>This section explains our mission statement.</p>
-        <p><strong>Mission:</strong> To provide high-quality education and foster innovation.</p>
-        <p>We strive to make our campus a place where students can grow both academically and personally.</p>
-    </section>
+    <div class="fixed-nav">
+        Nanjing University of Information Science & Technology - About Us
+    </div>
 
-    <section>
-        <h2>Our History</h2>
-        <p>The university was established in <time datetime="2000-09-01">September 2000</time>.</p>
-        <p>Since then, it has been dedicated to excellence in teaching and research.</p>
-        <p><em>Note:</em> The founding date is significant for our institution.</p>
-    </section>
+    <div class="container">
+        <h1>Nanjing University of Information Science & Technology</h1>
+        <h2>About Our University</h2>
 
-    <section>
-        <h2>Student Life</h2>
-        <p>Student life at our campus is vibrant and diverse.</p>
-        <p>Students participate in various activities that enhance their learning experience.</p>
-        <p><mark>Highlight:</mark> We encourage all students to engage in extracurricular activities.</p>
-    </section>
+        <div class="main-nav">
+            <a href="index.html">Home</a> |
+            <a href="campus-info.html">Campus Info</a> |
+            <a href="text-formatting.html">About Us</a> |
+            <a href="multimedia.html">Multimedia</a> |
+            <a href="registration.html">Registration</a> |
+            <a href="login.html">Login</a>
+        </div>
 
-    <section>
-        <h2>Contact Information</h2>
-        <p>If you have any questions or need further information, please contact us.</p>
-        <p><small>Please note that office hours are from 9 AM to 5 PM.</small></p>
-        <p><ins>New Contact Details:</ins> Updated on January 1, 2025.</p>
-        <p><del>Old Contact Details:</del> No longer valid.</p>
-    </section>
-</main>
+        <div class="content-section">
+            <h3>Our Mission</h3>
+            <p>This section explains our mission statement.</p>
+            <p><strong>Mission:</strong> To provide high-quality education and foster innovation.</p>
+            <p>We strive to make our campus a place where students can grow both academically and personally.</p>
+        </div>
 
-<footer>
-    <p>&copy; 2025 Campus Website. All rights reserved.</p>
-</footer>
+        <div class="content-section">
+            <h3>Our History</h3>
+            <p>The university was established in <time datetime="2000-09-01">September 2000</time>.</p>
+            <p>Since then, it has been dedicated to excellence in teaching and research.</p>
+            <p><em>Note:</em> The founding date is significant for our institution.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>Student Life</h3>
+            <p>Student life at our campus is vibrant and diverse.</p>
+            <p>Students participate in various activities that enhance their learning experience.</p>
+            <p><mark>Highlight:</mark> We encourage all students to engage in extracurricular activities.</p>
+        </div>
+
+        <div class="content-section">
+            <h3>Contact Information</h3>
+            <p>If you have any questions or need further information, please contact us.</p>
+            <p><small>Please note that office hours are from 9 AM to 5 PM.</small></p>
+            <p><ins>New Contact Details:</ins> Updated on January 1, 2025.</p>
+            <p><del>Old Contact Details:</del> No longer valid.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Campus Website. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
