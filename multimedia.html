@@ -2,46 +2,158 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Multimedia Example</title>
+    <title>Campus Multimedia Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .main-nav {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .main-nav a {
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .media-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f5f9ff;
+            border-radius: 5px;
+        }
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .media-item {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .campus-logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        audio, video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Welcome to Our Campus</h1>
-    <nav>
+
+<!-- 固定导航栏，与其他页面一致 -->
+<div class="fixed-nav">
+    Nanjing University of Information Science & Technology - Multimedia Gallery
+</div>
+
+<div class="container">
+    <h1>Nanjing University of Information Science & Technology</h1>
+    <h2>Campus Multimedia Gallery</h2>
+
+
+    <div class="main-nav">
         <a href="index.html">Home</a> |
+        <a href="campus-info.html">Campus Info</a> |
         <a href="text-formatting.html">About Us</a> |
-        <a href="multimedia.html">Multimedia</a>
-    </nav>
-</header>
+        <a href="multimedia.html">Multimedia</a> |
+        <a href="registration.html">Registration</a> |
+        <a href="login.html">Login</a>
+    </div>
 
-<main>
-    <section>
-        <h2>Campus Logo</h2>
-        <p>Here is our campus logo:</p>
-        <img src="images/logo.png" alt="Campus Logo" width="862" height="200">
-    </section>
+    <!-- 多媒体内容区域，使用统一的容器 -->
+    <div class="media-container">
+        <div class="media-section media-item">
+            <h3>Campus Logo</h3>
+            <p>Here is our official campus logo:</p>
 
-    <section>
-        <h2>School Anthem</h2>
-        <p>Listen to our school anthem:</p>
-        <audio controls>
-            <source src="school_anthem.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+            <img src="images/logo.png" alt="Campus Logo" width="862" height="200" class="campus-logo">
+        </div>
 
-    <section>
-        <h2>Campus Tour</h2>
-        <p>Watch a tour of our beautiful campus:</p>
-        <video width="600" height="400" controls>
-            <source src="campus_tour.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-</main>
+        <div class="media-section media-item">
+            <h3>School Anthem</h3>
+            <p>Listen to our school anthem:</p>
+            <audio controls>
+                <source src="school_anthem.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p><small>Click the play button to listen to our school anthem</small></p>
+        </div>
+
+        <div class="media-section" style="flex-basis: 100%;">
+            <h3>Campus Tour Video</h3>
+            <p>Watch a tour of our beautiful campus:</p>
+            <video width="600" height="400" controls>
+                <source src="campus_tour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p><small>Explore our campus facilities and environment through this guided tour</small></p>
+        </div>
+    </div>
+
+    <div class="media-section" style="margin-top: 30px; background-color: #e6f2ff;">
+        <h3>About Our Multimedia Content</h3>
+        <p>Our multimedia gallery showcases the visual and auditory identity of our university. The logo represents our institutional brand, the anthem embodies our spirit and values, and the campus tour provides a virtual experience of our facilities and environment.</p>
+        <p>These resources are available for prospective students, visitors, and the university community to better understand and connect with our campus life.</p>
+    </div>
+</div>
 
 <footer>
     <p>&copy; 2025 Campus Website. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
