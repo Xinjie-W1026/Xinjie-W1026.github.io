@@ -2,37 +2,190 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Campus Login Form</title>
+    <title>Student Login - Campus Portal</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .main-nav {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .main-nav a {
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .login-form {
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #004080;
+            box-shadow: 0 0 5px rgba(0, 64, 128, 0.2);
+        }
+        .form-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        input[type="submit"],
+        input[type="reset"],
+        .transform-hover {
+            padding: 12px 25px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="reset"] {
+            background-color: #6c757d;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+        .register-link {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        .login-hint {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #004080;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Nanjing University of Information Science & Technology</h1>
-<h2>Student Login</h2>
 
-<p>
-    <a href="index.html">Home</a> |
-    <a href="text-formatting.html">About Us</a> |
-    <a href="registration.html">Registration</a> |
-    <a href="login.html">Login</a>
-</p>
+<div class="fixed-nav">
+    Nanjing University of Information Science & Technology - Student Login Portal
+</div>
 
-<h3>Please Enter Your Credentials</h3>
+<div class="container">
+    <h1>Nanjing University of Information Science & Technology</h1>
+    <h2>Student Login</h2>
 
-<form action="submit-form.html" method="post">
-    <label for="email">Email Address:</label><br>
-    <input type="email" id="email" name="email" placeholder="Enter your registered email"><br><br>
 
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+    <div class="main-nav">
+        <a href="index.html">Home</a> |
+        <a href="campus-info.html">Campus Info</a> |
+        <a href="text-formatting.html">About Us</a> |
+        <a href="multimedia.html">Multimedia</a> |
+        <a href="registration.html">Registration</a> |
+        <a href="login.html">Login</a>
+    </div>
 
-    <input type="submit" value="Login">
-    <input type="reset" value="Clear">
-</form>
 
-<p>Don't have an account? <a href="registration.html">Click here to register</a>.</p>
+    <div class="login-hint">
+        <p><strong>Welcome back!</strong> Please enter your credentials to access your student account, course materials, and campus resources.</p>
+    </div>
+
+
+    <h3>Please Enter Your Credentials</h3>
+
+    <form action="submit-form.html" method="post" class="login-form">
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="Login">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+
+
+    <div class="register-link">
+        <p>Don't have an account? <a href="registration.html">Click here to register</a>.</p>
+
+        <button class="transform-hover" onclick="window.location.href='registration.html';" style="margin-top: 15px;">
+            New Student Registration
+        </button>
+    </div>
+</div>
 
 <footer>
-    <p>&copy; 2025 Campus Website. All rights reserved.</p>
+    <p>&copy; 2025 Nanjing University of Information Science & Technology Campus Website. All rights reserved.</p>
+    <p><small>Need assistance? Contact the IT Help Desk at it-support@nuist.edu.cn or call (123) 456-7890</small></p>
 </footer>
 
 </body>
